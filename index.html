@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" type="image/png" href="icon.jpeg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PLANTeCARE</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        #about {
+            text-align: center;
+        }
+
+        .service {
+            display: inline-block;
+            margin: 0 10px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <!------------------ NAVIGATION BAR STARTS  ------------------>
+        <nav>
+            <img src="icon.jpeg" alt="Logo">
+            <ul>
+                <li><a href="#top"><strong>HOME</strong></a></li>
+                <li><a href="#services"><strong>SERVICES</strong></a></li>
+                <li><a href="#mygarden"><strong>MY GARDEN</strong></a></li>
+                <li><a href="#contact"><strong>CONTACT</strong></a></li>
+                <li><a href="#about"><strong>ABOUT US</strong></a></li>
+            </ul>
+        </nav>
+        <!------------------ NAVIGATION BAR ENDS  ------------------>
+        <h1>PLANTeCARE</h1>
+        <p>YOUR PLANTS' PERSONAL HYDRATION MAESTRO</p>
+        <a href="#contact" class="cta">GET IN TOUCH</a>
+    </header>
+    <main>
+        <section id="services">
+            <!------------------ SERVICES PAGE STARTS  ------------------>
+            <h2>OUR SERVICES</h2>
+            <div class="service">
+                <img src="download.png" alt="Service 1">
+                <h3>WATER TRACKING</h3>
+                <p>Keeps a track of your watering schedule</p>
+            </div>
+            <div class="service">
+                <img src="images.png" alt="Service 2">
+                <h3>WATERING REMAINDER NOTIFICATION</h3>
+                <p>Gives a notification when it is time for watering</p>
+            </div>
+            <div class="service">
+                <img src="plant-growth-leafs-icon-vector-15036462.jpg" alt="Service 3">
+                <h3>OVERALL PROGRESS TRACKING</h3>
+                <p>Tracks the growth of the plant</p>
+            </div>
+        </section>
+        <!------------------ SERVICES PAGE ENDS  ------------------>
+        <section id="mygarden">
+            <link rel="stylesheet" href="mygarden.css">
+            <h2>MY GARDEN</h2>
+            <div id="plantList"></div>
+            <br>
+            <button class="fab" onclick="openAddModal()">+</button>
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeAddModal()">&times;</span>
+                    <form id="addForm">
+                        <label for="plantName">
+                            <h3>Plant Name:</h3>
+                        </label>
+                        <input type="text" id="plantName" required>
+                        <label for="wateringSchedule">Watering Schedule (days):</label>
+                        <input type="number" id="wateringSchedule" required>
+                        <button type="button" onclick="addPlant()">Add Plant</button>
+                    </form>
+                </div>
+            </div>
+            <div id="notification"></div>
+            </div>
+            <script src="mygarden.js"></script>
+        </section>
+        <!------------------ CONTACT PAGE STARTS  ---------------->
+
+        <section id="contact">
+            <h2>CONTACT US</h2>
+            <p>If you have any questions or inquiries, feel free to reach out to us. We're here to help!</p>
+            <form action="submit-form.php" method="post">
+                <input type="text" name="name" placeholder="Your Name">
+                <input type="email" name="email" placeholder="Your Email ">
+                <textarea name="message" placeholder="Your Message"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <!------------------ CONTACT PAGE ENDS  ---------------->
+
+        <!------------------ ABOUT PAGE STARTS ---------------->
+        <section id="about">
+            <h2>ABOUT US</h2>
+            <div class="service">
+                <img src="Him.jpg" alt="Service 1">
+                <h4>HIMANSHU CHAUHAN</h4>
+                <p>APP DEVELOPER (JAVASCRIPT)</p>
+            </div>
+            <div class="service">
+                <img src="Man.jpg" alt="Service 2">
+                <h4>VADLAMANI SAI MANIDEEP</h4>
+                <p>FRONTEND DEVELOPER (HTML & CSS)</p>
+            </div>
+            <div class="service">
+                <img src="Sneha.jpg" alt="Service 3">
+                <h4>SNEHA MISHRA</h4>
+                <p>WEBSITE DESIGNER (CSS STYLING)</p>
+            </div>
+            <div class="service">
+                <img src="San.jpg" alt="Service 4">
+                <h4>SANSKRITA SINGH</h4>
+                <p>FRONT DEVELOPER (HTML & CSS)</p>
+            </div>
+        </section>
+        <!------------------ ABOUT PAGE ENDS  ---------------->
+    </main>
+    <!------------------ FOOTER STARTS  ---------------->
+    <footer>
+        <p>All Rights Reserved ©PLANTeCARE 2023 </p>
+    </footer>
+    <!------------------ FOOTER ENDS  ---------------->
+</body>
+
+</html>
